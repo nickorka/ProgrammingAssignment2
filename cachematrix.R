@@ -3,6 +3,7 @@
 
 ## makeCacheMatrix function is simple getter-setter function to
 ## hold original and inversed matrixes in an instatiated variable environment.
+## The function expexts inversable matrix for initialization.
 
 makeCacheMatrix <- function(x = matrix()) {
     mi <- NULL # inversed matrix
