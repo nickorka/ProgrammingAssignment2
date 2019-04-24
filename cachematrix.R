@@ -1,5 +1,19 @@
 ## The functions are supposed to work in conjuction to each other to
 ## provide lazy initialization for inverse matrix 
+## 
+## The cache initialization can be done by:
+## 
+##     m <- makeCacheMatrix()
+##     m$set(matrix(1:4, nrow = 2, ncol = 2))
+##     
+##    or
+##     
+##     m <- makeCacheMatrix(matrix(1:4, nrow = 2, ncol = 2))
+## 
+## To calculate inversed matrix you can call:
+## 
+##     cacheSolve(m)
+##
 
 ## makeCacheMatrix function is simple getter-setter function to
 ## hold original and inversed matrixes in an instatiated variable environment.
@@ -27,7 +41,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## cacheSolve does lazy initialization of inverse matrix.
-## If inverse matrix has been already initialized the matrix will be returned withou computation.
+## If inverse matrix has been already initialized the matrix will be returned without computation.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
